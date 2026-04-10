@@ -1,18 +1,18 @@
-# 📊 Amazon Product Rating Prediction (ML Project)
+#  Amazon Product Rating Prediction (ML Project)
 
-## 🚀 Overview
+Overview
 
 This project focuses on predicting product ratings from an Amazon dataset using machine learning. The goal is to understand how pricing, discounts, and product engagement influence customer ratings.
 
 ---
 
-## 🎯 Problem Statement
+Problem Statement
 
 Can we predict a product’s rating based on its pricing, discount, and popularity features?
 
 ---
 
-## 📁 Dataset Description
+Dataset Description
 
 The dataset contains Amazon product information including:
 
@@ -24,7 +24,7 @@ The dataset contains Amazon product information including:
 
 ---
 
-## 🧹 Data Preprocessing
+ Data Preprocessing
 
 The dataset contained messy string values and required cleaning:
 
@@ -35,7 +35,7 @@ The dataset contained messy string values and required cleaning:
 
 ---
 
-## ⚙️ Feature Engineering
+ Feature Engineering
 
 New features were created to improve model performance:
 
@@ -46,7 +46,7 @@ New features were created to improve model performance:
 
 ---
 
-## 🤖 Model Used
+ Model Used
 
 ### 1. Linear Regression
 
@@ -58,7 +58,7 @@ Used to capture non-linear patterns in the data.
 
 ---
 
-## 📊 Model Evaluation
+# Model Evaluation
 
 Metrics used:
 
@@ -72,7 +72,7 @@ Visualization:
 
 ---
 
-## 📈 Results & Insights
+Results & Insights
 
 * Ratings are heavily clustered between **4.0 – 4.3**
 * Model predictions are also concentrated → indicates low variance in target
@@ -81,7 +81,7 @@ Visualization:
 
 ---
 
-## ⚠️ Limitations
+#  Limitations
 
 * Dataset lacks strong predictive features (like brand or sentiment)
 * Ratings have low variance → harder to predict accurately
@@ -89,7 +89,7 @@ Visualization:
 
 ---
 
-## 🔮 Future Improvements
+# Future Improvements
 
 * Use NLP on review text for better prediction
 * Add more meaningful features (brand, sentiment score)
@@ -98,7 +98,7 @@ Visualization:
 
 ---
 
-## 🛠️ Tech Stack
+#  Tech Stack
 
 * Python
 * Pandas
@@ -108,7 +108,7 @@ Visualization:
 
 ---
 
-## 📂 Project Structure
+# Project Structure
 
 ```
 amazon-ml-project/
@@ -123,7 +123,7 @@ amazon-ml-project/
 
 ---
 
-## 📌 Conclusion
+#  Conclusion
 
 This project demonstrates a complete ML pipeline:
 
@@ -136,6 +136,6 @@ While performance is limited due to dataset constraints, the project highlights 
 
 ---
 
-## 👨‍💻 Author
+# Author
 
 Krishna
