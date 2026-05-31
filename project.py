@@ -6,14 +6,14 @@ import pandas as pd
 df = pd.read_csv("amazon.csv")
 
 # -----------------------------
-# 🔍 Inspect data (important)
+#  Inspect data (important)
 # -----------------------------
 print(df.head())        # preview first rows
 print(df.columns)       # check column names
 print(df.info())        # check data types
 
 # -----------------------------
-# 💰 Fix price columns
+#  Fix price columns
 # -----------------------------
 # Remove ₹ and commas, then convert to float safely
 df['discounted_price'] = pd.to_numeric(
@@ -27,7 +27,7 @@ df['actual_price'] = pd.to_numeric(
 )
 
 # -----------------------------
-# 📊 Fix discount percentage
+#  Fix discount percentage
 # -----------------------------
 # Remove % sign and convert to float
 df['discount_percentage'] = pd.to_numeric(
@@ -36,13 +36,13 @@ df['discount_percentage'] = pd.to_numeric(
 )
 
 # -----------------------------
-# ⭐ Fix rating
+#  Fix rating
 # -----------------------------
 # Convert rating to float (handles bad values)
 df['rating'] = pd.to_numeric(df['rating'], errors='coerce')
 
 # -----------------------------
-# 🔢 Fix rating count
+#  Fix rating count
 # -----------------------------
 # Remove commas and convert to float
 df['rating_count'] = pd.to_numeric(
@@ -51,7 +51,7 @@ df['rating_count'] = pd.to_numeric(
 )
 
 # -----------------------------
-# 🧹 Handle missing values
+#  Handle missing values
 # -----------------------------
 # Check how many null values exist
 print(df.isnull().sum())
@@ -60,26 +60,26 @@ print(df.isnull().sum())
 df = df.dropna()
 
 # -----------------------------
-# ✅ Final check
+# Final check
 # -----------------------------
 print(df.dtypes)   # confirm all numeric columns are correct
 print(df.shape)    # see how much data remains
 # -----------------------------
-# 💡 Price difference (actual - discounted)
+#  Price difference (actual - discounted)
 # -----------------------------
 # Shows how much discount in absolute value
 df['price_diff'] = df['actual_price'] - df['discounted_price']
 
 
 # -----------------------------
-# 💡 Discount ratio
+#  Discount ratio
 # -----------------------------
 # More useful than percentage sometimes (0 to 1 scale)
 df['discount_ratio'] = df['discounted_price'] / df['actual_price']
 
 
 # -----------------------------
-# 💡 Price bucket (cheap / mid / expensive)
+#  Price bucket (cheap / mid / expensive)
 # -----------------------------
 # Helps model understand price segments
 df['price_bucket'] = pd.cut(
@@ -90,7 +90,7 @@ df['price_bucket'] = pd.cut(
 
 
 # -----------------------------
-# 💡 Log of rating count
+#  Log of rating count
 # -----------------------------
 # Reduces skew (important for ML)
 import numpy as np
